@@ -27,7 +27,7 @@ This command-line application allows users to build a development team by enteri
 To use the Team Builder application, follow these steps:
 
 1. Clone the repository:
-`git clone git@github.com:fishmon/TeamManagerGenerator.git `
+`git clone git@github.com:fishmon/TeamManager.git `
 
 
 2. Navigate to the project directory:
@@ -80,13 +80,12 @@ Contributions to this project are welcome! If you have suggestions for improveme
 
 ## Repository
 
-Check out the [repository](https://github.com/fishmon/TeamManagerGenerator) for this project to view the source code and documentation.
+Check out the [repository](https://github.com/fishmon/TeamManager) for this project to view the source code and documentation.
 
 ## Video Demo
 
-Watch a vide of the Team Builder application [here](https://drive.google.com/file/d/1Dsh4tLJHCVa4WypPb6u7lhgpyNUPy8Bo/view?usp=sharing), or the gif file version bellow.
+Watch a vide of the Team Builder application [here](https://drive.google.com/file/d/18tm-ef-5Y5WMzkPhSoflA3RI3SzKuRTe/view?usp=sharing).
 
-![Gif](./dist/images/demo.gif)
 
 
 ## Contact Me
