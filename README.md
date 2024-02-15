@@ -1,142 +1,98 @@
-# Module 12 Object-Oriented Programming: Team Profile Generator
+# Team Builder Command-Line Application
 
-## Your Task
+[![JavaScript](https://img.shields.io/badge/Language-JavaScript-yellow)](https://www.javascript.com/)
+[![Node.js](https://img.shields.io/badge/Dependency-Node.js-brightgreen)](https://nodejs.org/)
+[![Inquirer](https://img.shields.io/badge/Dependency-Inquirer-blue)](https://www.npmjs.com/package/inquirer)
+[![HTML](https://img.shields.io/badge/Language-HTML-orange)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS](https://img.shields.io/badge/Language-CSS-blue)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![Testing](https://img.shields.io/badge/Testing-Jest-red)](https://jestjs.io/)
 
-Your task is to take the given starter code and convert it into a working Node.js command-line application. This application will take in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. You have been provided with tests, so make sure every part of your code passes each provided test.
 
-## User Story
+This command-line application allows users to build a development team by entering information about team members. The application utilizes classes to represent different types of team members, including the team manager, engineers, and interns. It also incorporates inquirer for user input and generates an HTML file with information about the team members.
 
-As a manager a user want to generate a webpage that displays my team's basic info so that a user have quick access to their emails and GitHub profiles.
+## Table of Contents
 
-## Instructions
-
-* Create a command-line application that accepts accepts user input using the provided starter code.   
-  * Create classes for each team member provided and export them. The tests for these classes (in the `_tests_` directory) must ALL pass.     
-    * The first class is an `Employee` parent class with the following properties and methods:       
-      * `name`
-      * `id`
-      * `email`
-      * `getName()`
-      * `getId()`
-      * `getEmail()`
-      * `getRole()`&mdash;returns `'Employee'`     
-    * The other three classes will extend `Employee`.      
-    * In addition to `Employee`'s properties and methods, `Manager` will also have the following:
-      * `officeNumber`
-      * `getRole()`&mdash;overridden to return `'Manager'`
-    * In addition to `Employee`'s properties and methods, `Engineer` will also have the following:
-      * `github`&mdash;GitHub username
-      * `getGithub()`
-      * `getRole()`&mdash;overridden to return `'Engineer'`
-    * In addition to `Employee`'s properties and methods, `Intern` will also have the following:
-      * `school`
-      * `getSchool()`
-      * `getRole()`&mdash;overridden to return `'Intern'`
-    * Finally, although it’s not a requirement, consider adding validation to ensure that user input is in the proper format.   
-  * Write code in `index.js` that uses inquirer to gather information about the development team members and creates objects for each team member using the correct classes as blueprints.
-    * When a user starts the application then they are prompted to enter the **team manager**’s:
-      * Name
-      * Employee ID
-      * Email address
-      * Office number
-    * When a user enters those requirements then the user is presented with a menu with the option to:
-      * Add an engineer
-      * Add an intern 
-      * Finish building the team
-    * When a user selects the **engineer** option then a user is prompted to enter the following and then the user is taken back to the menu:
-      * Engineer's Name
-      * ID
-      * Email
-      * GitHub username
-    * When a user selects the intern option then a user is prompted to enter the following and then the user is taken back to the menu:
-      * Intern’s name
-      * ID
-      * Email
-      * School
-    * When a user decides to finish building their team then they exit the application, and the HTML is generated.
-  * Call the `render` function (provided for you) and pass in an array containing all employee objects; 
-    * The `render` function will generate and return a block of HTML including templated divs for each employee!
-  * Create an HTML file using the HTML returned from the `render` function. 
-    * Write it to a file named `team.html` in the `output` folder. 
-    * You can use the provided variable `outputPath` to target this location.
-
----
-
-## Mock-Up
-
-The following image shows a mock-up of the generated HTML’s appearance and functionality:
-
-![HTML webpage titled “My Team” features five boxes listing employee names, titles, and other key info.](./Assets/14-object-oriented-programming-challenge-demo.png)
-
-The styling in the image is just an example, so feel free to add your own.
-
----
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Classes and Structure](#classes-and-structure)
+- [Validation](#validation)
+- [Contributing](#contributing)
+- [Repository](#repository)
+- [Video Demo](#video-demo)
+- [Contact Me](#contact-me)
+- [License](#license)
 
 ## Getting Started
 
-This Challenge will combine many of the skills we've covered so far. In addition to the User Story and Acceptance Criteria, we’ve provided some guidelines to help get started.
+To use the Team Builder application, follow these steps:
 
-Your application should use [Jest](https://www.npmjs.com/package/jest) for running the unit tests and [Inquirer](https://www.npmjs.com/package/inquirer) for collecting input from the user. The application will be invoked by using the following command:
+1. Clone the repository:
+`git clone git@github.com:fishmon/TeamManagerGenerator.git `
 
-```bash
-node index.js
-```
 
----
+2. Navigate to the project directory:
+`cd <project-directory>`
 
-## Hints
 
-* You will want to make your methods as pure as possible. This means try to make your methods simple so that they are easier to test.
+3. Install dependencies:
+`npm install`
 
-* The different employee types should all inherit some methods and properties from a base class of `Employee`.
- 
-* Be sure to test out each class and verify it generates an object with the correct structure and methods. This structure will be crucial in order for the provided `render` function to work!
-  
-* You may need to check if the `output` folder exists and create it if it does not.
 
----
+4. Start the application:
+`node index`
 
-## Grading Requirements
+5. Testing :
+`npm run test`
 
-This Challenge is graded based on the following criteria: 
 
-### Deliverables: 25%
+## Usage
 
-* A sample HTML file generated using the application must be submitted.
+1. Upon starting the application, you will be prompted to enter information about the team manager, including their name, employee ID, email address, and office number.
 
-* Your GitHub repository containing your application code.
+2. After entering the manager's information, you will be presented with a menu offering the following options:
+- Add an engineer
+- Add an intern
+- Finish building the team
 
-### Technical Acceptance Criteria: 50%
+3. If you choose to add an engineer, you will be prompted to enter the engineer's name, ID, email, and GitHub username.
 
-* Satisfies all of the preceding acceptance criteria plus the following:
+4. If you choose to add an intern, you will be prompted to enter the intern's name, ID, email, and school.
 
-	* Uses the [Inquirer package](https://www.npmjs.com/package/inquirer).
+5. You can continue adding engineers and interns as needed. Once you finish building the team, select the option to finish, and the application will exit.
 
-	* All tests pass using the [Jest package](https://www.npmjs.com/package/jest).
+6. The application will generate an HTML file named `team.html` in the `output` folder. This file will contain information about all the team members you entered.
 
-  * The application must have `Employee`, `Manager`, `Engineer`, and `Intern` classes.
+## Classes and Structure
 
-### Repository Quality: 25%
+The application is structured with classes for each type of team member:
+- `Employee`: Represents a generic employee with properties such as name, ID, and email.
+- `Manager`: Extends `Employee` and includes an additional property for office number.
+- `Engineer`: Extends `Employee` and includes a property for GitHub username.
+- `Intern`: Extends `Employee` and includes a property for school.
 
-* Repository has a unique name.
+## Validation
 
-* Repository follows best practices for file structure and naming conventions.
+The application incorporates validation to ensure that user input is in the proper format. This helps prevent errors and ensures that the generated HTML is accurate.
 
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+## Contributing
 
-* Repository contains multiple descriptive commit messages.
+Contributions to this project are welcome! If you have suggestions for improvements or find any issues, please submit them via GitHub issues or fork the repository and submit a pull request.
 
-* Repository contains a high-quality readme with description.
+## Repository
 
----
+Check out the [repository](https://github.com/fishmon/TeamManagerGenerator) for this project to view the source code and documentation.
 
-## Review
+## Video Demo
 
-You are required to submit the following for review:
+Watch a vide of the Team Builder application [here](https://drive.google.com/file/d/1Dsh4tLJHCVa4WypPb6u7lhgpyNUPy8Bo/view?usp=sharing), or the gif file version bellow.
 
-* A sample HTML file generated using your application.
+![Gif](./dist/images/demo.gif)
 
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
 
----
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+## Contact Me
+
+For any inquiries or feedback, feel free to contact me at [serbanescuclaudiu93@gmail.com](mailto:serbanescuclaudiu93@gmail.com).
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
