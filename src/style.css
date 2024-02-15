@@ -1,0 +1,83 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+}
+
+/* Header */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px; /* Adjusted padding */
+  text-align: center;
+}
+
+header h1 {
+  font-size: 24px; /* Adjusted font size */
+  margin: auto; /* Adjusted margin */
+}
+
+/* Team Container */
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Employee Card */
+.employee-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  padding: 20px;
+  max-width: 300px;
+  height: 350px; /* Set a fixed height */
+}
+
+.employee-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Head Container */
+.head-container {
+  background-color: #007bff;
+  border-radius: 10px 10px 0 0;
+  color: #fff;
+  padding: 15px;
+}
+
+.card-head h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.role h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Body Container */
+.body-container {
+  padding: 20px;
+}
+
+.body-container hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+
+.body-container p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
